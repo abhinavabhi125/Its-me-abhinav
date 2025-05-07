@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="hero">
+      <h1>Hello, I'm <span class="name">Abhinav.A</span></h1>
+      <p class="typewriter">Frontend Developer | UI/UX Designer,html,python,c,cpp,fletter</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skill-bar">
+      <span>HTML</span>
+      <div class="bar"><div class="progress html"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>CSS</span>
+      <div class="bar"><div class="progress css"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>JavaScript</span>
+      <div class="bar"><div class="progress js"></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1" />
+        <div class="project-info">
+          <h3>Project Title</h3>
+          <p>Short description of the project.</p>
+        </div>
+      </div>
+      <!-- More cards -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
