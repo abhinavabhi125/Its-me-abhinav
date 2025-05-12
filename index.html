@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3 Tab Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .tabs {
+      display: flex;
+      background-color: #333;
+    }
+    .tab {
+      flex: 1;
+      padding: 14px;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      background-color: #333;
+      border-bottom: 2px solid transparent;
+    }
+    .tab:hover, .tab.active {
+      background-color: #555;
+      border-bottom: 2px solid #00bcd4;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('home')">Home</div>
+    <div class="tab" onclick="showTab('about')">About</div>
+    <div class="tab" onclick="showTab('contact')">Contact</div>
+  </div>
+
+  <div id="home" class="tab-content active">
+    <h2>Welcome to the Home Page</h2>
+    <p>This is the home tab content.</p>
+  </div>
+  <div id="about" class="tab-content">
+    <h2>About Us</h2>
+    <p>This is the about tab content.</p>
+  </div>
+  <div id="contact" class="tab-content">
+    <h2>Contact</h2>
+    <p>This is the contact tab content.</p>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(c => c.classList.remove('active'));
+
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(t => t.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
